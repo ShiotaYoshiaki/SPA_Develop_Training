@@ -2,7 +2,9 @@
 
 ## Install
 
-1. [URL](https://gitforwindows.org/)よりInstall
+1. 
+   1. winは[URL](https://gitforwindows.org/)よりInstall
+   2. macは[URL](https://tracpath.com/bootcamp/git-install-to-mac.html#)を参照
 2. チェックボックスはそのまま
 3. 起動
 4. コマンドが使えるか確認
