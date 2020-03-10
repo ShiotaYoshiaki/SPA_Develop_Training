@@ -2,7 +2,7 @@
 
 ## Install
 
-1. 
+1. Install
    1. winは[URL](https://gitforwindows.org/)よりInstall
    2. macは[URL](https://tracpath.com/bootcamp/git-install-to-mac.html#)を参照
 2. チェックボックスはそのまま
@@ -12,6 +12,10 @@
 ```
 git --version
 ```
+
+## 事前準備
+1. GitHubの登録
+
 
 ## ショートカットの登録
 1. 右クリック

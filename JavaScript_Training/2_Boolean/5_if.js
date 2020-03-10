@@ -14,5 +14,3 @@ const second = false;
 if (second) {
   console.log('==================== second');
 }
-
-

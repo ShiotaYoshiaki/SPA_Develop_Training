@@ -15,19 +15,25 @@
  const firstNumber = 2;
  const secondNumber = 5;
  const thirdNumber = 3;
-
+ 
+ function sample2(num) {
+   console.log('sample2の引数: ' + num)
+   console.log('secondNumber: ' + secondNumber)
+   num += secondNumber;
+   console.log('sample2の実行結果: ' + num)
+   return num;
+}
  function sample1(num) {
+   console.log('sample1の引数: ' + num)
+   console.log('firstNumber: ' + firstNumber)
    num += firstNumber;
+   console.log('sample1の実行結果: ' + num)
    return num;
  }
 
- function sample2(num) {
-  num += secondNumber;
-  return num;
-}
 
-const result = sample1(thirdNumber) + sample2(thirdNumber);
+const result = sample2(thirdNumber) + sample1(thirdNumber);
 
-console.log(result);
+console.log('result: ' + result);
 
 

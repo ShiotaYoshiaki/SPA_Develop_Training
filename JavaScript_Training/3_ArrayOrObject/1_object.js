@@ -7,7 +7,7 @@ const sampleObj = {
   value: 'valueName',
 };
 console.log(sampleObj);
-console.log(sampleObj.key);
+console.log(sampleObj.value);
 
 /**
  * 存在しないものを指定すると、
