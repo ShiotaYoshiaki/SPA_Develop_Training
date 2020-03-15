@@ -22,5 +22,5 @@ const mainCity = {
     katsushika_ku: 'お台場',
   },
   chiba: '千葉市',
-}
+};
 console.log(mainCity);

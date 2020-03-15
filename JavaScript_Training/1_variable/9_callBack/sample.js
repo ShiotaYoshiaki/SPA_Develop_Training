@@ -3,14 +3,14 @@ function sampleFunc() {
   console.log('sample');
 }
 
-function callBackFunc(testFunc) {
+function secondFunc(callBackFunc) {
   console.log('====================2');
-  testFunc();
+  callBackFunc();
 }
 
 function main() {
   console.log('====================3');
-  callBackFunc(sampleFunc);
+  secondFunc(sampleFunc);
 }
 
 main();

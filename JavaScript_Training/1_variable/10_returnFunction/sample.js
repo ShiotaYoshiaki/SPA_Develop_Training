@@ -31,7 +31,6 @@
    return num;
  }
 
-
 const result = sample2(thirdNumber) + sample1(thirdNumber);
 
 console.log('result: ' + result);
