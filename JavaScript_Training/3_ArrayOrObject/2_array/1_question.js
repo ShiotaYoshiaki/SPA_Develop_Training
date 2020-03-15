@@ -3,3 +3,4 @@
  */
 
 const sampleArray = ['first', 'second', 'third'];
+    console.log(sampleArray[2]);
