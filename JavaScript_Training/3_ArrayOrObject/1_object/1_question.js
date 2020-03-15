@@ -10,4 +10,4 @@ const mainCity = {
   chiba: '千葉市',
 };
 
-console.log();
+console.log(mainCity.tokyo.katsushika_ku);

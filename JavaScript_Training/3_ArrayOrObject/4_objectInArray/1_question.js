@@ -12,3 +12,4 @@ const sampleArray = [
     kanzi: '千葉'
   }
 ];
+console.log(sampleArray[0].kanzi);
