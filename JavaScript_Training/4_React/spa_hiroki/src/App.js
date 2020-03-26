@@ -1,19 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import RedButton from './js/training/components/RedButton';
+import FlexibleButton from './js/training/components/FlexibleButton';
 
 function App() {
+
+  const domArray = [];
+
+    for (let i = 100; i <= 180; i += 20) {
+      domArray.push(<FlexibleButton  width={i} />)
+    }
+
 
  
   return (
     <div className="App">
       <header className="App-header">
-      <RedButton backgroundColor="red"/>
-      <RedButton backgroundColor="blue"/>
-      <RedButton backgroundColor="yellow"/>
-      <RedButton backgroundColor="gray"/>
-      <RedButton backgroundColor="purple"/>
+      {domArray}
+
 
       </header>
     </div>
