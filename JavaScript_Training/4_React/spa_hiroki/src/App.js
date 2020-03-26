@@ -7,9 +7,12 @@ function App() {
 
   const domArray = [];
 
-    for (let i = 100; i <= 180; i += 20) {
+    for (let i = 100, count = 1; count <= 5;  i += 20,count += 1) {
+     
       domArray.push(<FlexibleButton  width={i} />)
+
     }
+  
 
 
  
