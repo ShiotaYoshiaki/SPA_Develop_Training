@@ -1,18 +1,32 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import FlexibleButton from './js/training/components/FlexibleButton';
+import DifficultButton from './js/training/components/DifficultButton';
 
 function App() {
 
   const domArray = [];
-
-    for (let i = 100, count = 1; count <= 5;  i += 20,count += 1) {
-     
-      domArray.push(<FlexibleButton  width={i} />)
-
-    }
   
+
+    for (let i = 100, count = 1 ; count <= 10;  i += 20,count += 1) {
+
+     
+
+      if (count % 3 === 0) {
+
+        domArray.push( <DifficultButton width={i} backgroundColor={'red'} param={count}/>)
+
+       } else if (count % 4 === 0) {
+
+        domArray.push( <DifficultButton width={i} backgroundColor={'blue'} param={'!!'}/>)
+
+       } else {
+
+        domArray.push( <DifficultButton width={i} backgroundColor={'blue'} param={count}/>)
+
+       }
+    
+  }
 
 
  
