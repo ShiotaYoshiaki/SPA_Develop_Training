@@ -5,7 +5,11 @@ import DifficultButton from './js/training/components/DifficultButton';
 
 function App() {
   const domArray = [];
-    for (let i = 100, count = 1, h = 100 ; count <= 13;  i += 20,count += 1) {
+  const baseNum= 100;
+  const baseHeight = 100;
+  const maxNum = 13;
+  const upperNum = 20;
+for(let i = baseNum, count = 1; count <= maxNum; i += upperNum, count += 1){
      let colorParam = 'blue';
      let Param = count;
       if (count % 3 === 0) {
@@ -14,7 +18,7 @@ function App() {
       if (count % 4 === 0) {
         Param= '!!';
        } 
-      domArray.push( <DifficultButton width={i} height={h} backgroundColor={colorParam} param={Param}/>)
+      domArray.push( <DifficultButton width={i} height={baseHeight} backgroundColor={colorParam} param={Param}/>)
   }
   return (
     <div className="App">
