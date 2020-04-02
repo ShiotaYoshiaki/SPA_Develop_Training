@@ -1,6 +1,6 @@
-import React from "react";
-import "./App.css";
-import PlusButton from "./js/calc/containers/pulsButton";
+import React from 'react';
+import './App.css';
+import PlusButton from '../../spa_shiota/src/calc/components/plusButton';
 
 function App() {
   return (
