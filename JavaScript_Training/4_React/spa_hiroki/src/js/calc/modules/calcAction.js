@@ -5,6 +5,7 @@ import {PUSH_MINUS_BUTTON_REQUEST} from "../../const/actionTypes";
  */
 export function plus() {
     return {type: PUSH_PLUS_BUTTON_REQUEST};
+    
 }
 export function minus() {
     return {type: PUSH_MINUS_BUTTON_REQUEST};

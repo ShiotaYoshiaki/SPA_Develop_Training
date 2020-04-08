@@ -14,13 +14,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     plus: () => dispatch(plus()),
+    minus: () => dispatch(minus())
   };
 }
 
-function mapDispatchToProps2(dispatch2) {
-  return {
-    minus: () => dispatch2(minus()),
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps, mapDispatchToProps2)(calcResult);
+export default connect(mapStateToProps, mapDispatchToProps )(calcResult);

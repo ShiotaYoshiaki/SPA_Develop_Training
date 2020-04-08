@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import PlusButton from './js/calc/containers/plusButton';
+import CalcButton from './js/calc/containers/calcButton';
 import CalcResult from './js/calc/containers/calcResult';
-import MinusButton from './js/calc/containers/minusButton';
+//import MinusButton from './js/calc/containers/minusButton';
 
 function App() {
   return(
     <div className="App">
       <header className="App-header">
-      <PlusButton /> 
+      <CalcButton  param={"+"}/> 
       <CalcResult />
-      <MinusButton />
+      <CalcButton param={"-"}/>
       </header>
       </div>
   );
