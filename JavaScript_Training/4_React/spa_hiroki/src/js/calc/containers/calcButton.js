@@ -1,11 +1,9 @@
 import { connect } from 'react-redux';
 import { plus, minus, multiply, divide } from '../modules/calcAction';
-import calcResult from '../components/calcResult';
+import calcButton from '../components/calcButton';
 
-function mapStateToProps(state) {
-  return {
-    num: state.calc.num,
-  };
+function mapStateToProps() {
+  return {};
 }
 function mapDispatchToProps(dispatch) {
   return {
@@ -16,4 +14,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(calcResult);
+export default connect(mapStateToProps, mapDispatchToProps)(calcButton);
