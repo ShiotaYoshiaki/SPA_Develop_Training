@@ -1,5 +1,5 @@
 function sampleFunc() {
-  console.log('japan');
+  console.log('==================== 3');
 }
 
 console.log('==================== 1');
