@@ -1,14 +1,15 @@
-import { takeEvery, select } from 'redux-saga/effects';
-import { PUSH_PLUS_BUTTON_REQUEST } from '../../const/actionTypes';
-import { PUSH_MINUS_BUTTON_REQUEST } from '../../const/actionTypes';
-import { PUSH_MULTIPLY_BUTTON_REQUEST } from '../../const/actionTypes';
-import { PUSH_DIVIDE_BUTTON_REQUEST } from '../../const/actionTypes';
+import { takeEvery, fork } from "redux-saga/effects";
+import { PUSH_PLUS_BUTTON_REQUEST } from "../../const/actionTypes";
+import { PUSH_MINUS_BUTTON_REQUEST } from "../../const/actionTypes";
+import { PUSH_MULTIPLY_BUTTON_REQUEST } from "../../const/actionTypes";
+import { PUSH_DIVIDE_BUTTON_REQUEST } from "../../const/actionTypes";
+import calcService from "../services/calcService";
 
-function* calc() {
-  const state = yield select((state) => state);
-  console.log(state);
+function* calc(action) {
+  console.log("------------------------action");
+  console.log(action);
+  yield fork(calcService.run, action);
 }
 export default function* () {
-  yield takeEvery(PUSH_PLUS_BUTTON_REQUEST, PUSH_MINUS_BUTTON_REQUEST,
-    PUSH_MULTIPLY_BUTTON_REQUEST, PUSH_DIVIDE_BUTTON_REQUEST, calc);
-} 
+  yield takeEvery(PUSH_PLUS_BUTTON_REQUEST, calc);
+}

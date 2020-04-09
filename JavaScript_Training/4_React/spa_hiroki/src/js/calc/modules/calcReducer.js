@@ -1,4 +1,4 @@
-import { PUSH_PLUS_BUTTON_REQUEST } from '../../const/actionTypes';
+import { PUSH_PLUS_BUTTON_REQUEST, PUSH_PLUS_BUTTON_SUCCESS } from '../../const/actionTypes';
 import { PUSH_MINUS_BUTTON_REQUEST } from '../../const/actionTypes';
 import { PUSH_MULTIPLY_BUTTON_REQUEST } from "../../const/actionTypes";
 import { PUSH_DIVIDE_BUTTON_REQUEST } from "../../const/actionTypes";
@@ -8,10 +8,10 @@ const initialState = {
 };
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case PUSH_PLUS_BUTTON_REQUEST:
+    case PUSH_PLUS_BUTTON_SUCCESS:
       return {
         ...state,
-        num: state.num + 1,
+        num: action.payload,
       };
     case PUSH_MINUS_BUTTON_REQUEST:
       return {

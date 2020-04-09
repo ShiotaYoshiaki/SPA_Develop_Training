@@ -7,7 +7,7 @@ function mapStateToProps() {
 }
 function mapDispatchToProps(dispatch) {
   return {
-    plus: () => dispatch(plus()),
+    plus: (num) => dispatch(plus(num)),
     minus: () => dispatch(minus()),
     multiply: () => dispatch(multiply()),
     divide: () => dispatch(divide())
