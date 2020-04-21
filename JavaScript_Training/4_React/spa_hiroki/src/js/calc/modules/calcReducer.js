@@ -32,10 +32,9 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case PUSH_NUMBER_BUTTON_SUCCESS:
-      console.log('====================');
       return {
         ...state,
-        num: action.payload,
+        ...action.payload,
       }
 
     case PUSH_PLUS_BUTTON_REQUEST:
