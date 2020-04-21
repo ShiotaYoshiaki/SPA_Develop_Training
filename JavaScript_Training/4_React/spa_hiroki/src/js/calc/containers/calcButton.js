@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { plus, minus, multiply, divide } from '../modules/calcAction';
+import { plus, minus, multiply, divide, } from '../modules/calcAction';
 import calcButton from '../components/calcButton';
 
 function mapStateToProps() {
@@ -8,9 +8,11 @@ function mapStateToProps() {
 function mapDispatchToProps(dispatch) {
   return {
     plus: (num) => dispatch(plus(num)),
-    minus: () => dispatch(minus()),
-    multiply: () => dispatch(multiply()),
-    divide: () => dispatch(divide())
+    minus: (num) => dispatch(minus(num)),
+    multiply: (num) => dispatch(multiply(num)),
+    divide: (num) => dispatch(divide(num)),
+   
+   
   };
 }
 
