@@ -6,4 +6,6 @@
 export const CALC_PARAM = {
   PLUS: '+',
   MINUS: '-',
+  MULTIPLY: 'x',
+  DIVIDE: '÷',
 };
