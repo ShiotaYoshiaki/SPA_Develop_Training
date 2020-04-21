@@ -5,6 +5,7 @@ import {
   PUSH_MINUS_BUTTON_REQUEST,
   PUSH_DIVIDE_BUTTON_REQUEST,
 } from "../../const/actionTypes";
+import { CALC_PARAM } from "../../const/calcParam";
 
 const initialState = {
   /**
@@ -42,23 +43,23 @@ export default function reducer(state = initialState, action) {
     case PUSH_PLUS_BUTTON_REQUEST:
       return {
         ...state,
-        operator: "+",
-        num: state.num,
+        operator: CALC_PARAM.PLUS,
       };
     case PUSH_MINUS_BUTTON_REQUEST:
       return {
         ...state,
-        operator: "-",
+        operator: CALC_PARAM.MINUS
+        ,
       };
     case PUSH_MULTIPLY_BUTTON_REQUEST:
       return {
         ...state,
-        num: state.num * state.num,
+        operator: CALC_PARAM.MULTIPLY,
       };
     case PUSH_DIVIDE_BUTTON_REQUEST:
       return {
         ...state,
-        num: state.num / state.num,
+        operator: CALC_PARAM.DIVIDE,
       };
     default:
       return state;

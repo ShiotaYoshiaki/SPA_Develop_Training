@@ -7,12 +7,10 @@ function mapStateToProps() {
 }
 function mapDispatchToProps(dispatch) {
   return {
-    plus: (num) => dispatch(plus(num)),
-    minus: (num) => dispatch(minus(num)),
-    multiply: (num) => dispatch(multiply(num)),
-    divide: (num) => dispatch(divide(num)),
-   
-   
+    plus: () => dispatch(plus()),
+    minus: () => dispatch(minus()),
+    multiply: () => dispatch(multiply()),
+    divide: () => dispatch(divide()),
   };
 }
 

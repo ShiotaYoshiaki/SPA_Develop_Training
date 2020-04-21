@@ -5,6 +5,8 @@ import calcResult from "../components/calcResult";
 function mapStateToProps(state) {
   return {
     num: state.calc.num,
+    num2: state.calc.num2,
+    operator: state.calc.operator,
   };
 }
 function mapDispatchToProps(dispatch) {
