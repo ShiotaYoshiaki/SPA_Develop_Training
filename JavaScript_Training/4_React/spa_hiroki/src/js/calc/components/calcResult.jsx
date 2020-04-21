@@ -15,7 +15,7 @@ class calcResult extends React.Component {
              * numがnull, undefined, 空白, 0のときは文字を表示
              */
             <div>{num || 'Please input value'} {operator} {num2 || null}</div>
-        )
+        );
     }
 }
 

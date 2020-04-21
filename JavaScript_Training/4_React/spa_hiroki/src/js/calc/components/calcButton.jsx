@@ -9,15 +9,24 @@ class calcButton extends React.Component {
           {this.props.param}
         </button>
       );
-    } else if (this.props.param === CALC_PARAM.MINUS) {
+    }
+    if (this.props.param === CALC_PARAM.MINUS) {
       return (
         <button onClick={() => this.props.minus(this.props.param)}>
           {this.props.param}
         </button>
       );
-    } else if (this.props.param === CALC_PARAM.MULTIPLY) {
+    }
+    if (this.props.param === CALC_PARAM.MULTIPLY) {
       return (
         <button onClick={() => this.props.multiply(this.props.param)}>
+          {this.props.param}
+        </button>
+      );
+    }
+    if (this.props.param === CALC_PARAM.EQUAL) {
+      return (
+        <button onClick={() => this.props.equal()}>
           {this.props.param}
         </button>
       );

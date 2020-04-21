@@ -8,4 +8,5 @@ export const CALC_PARAM = {
   MINUS: '-',
   MULTIPLY: 'x',
   DIVIDE: '÷',
+  EQUAL: '=',
 };

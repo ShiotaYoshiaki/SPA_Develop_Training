@@ -4,6 +4,7 @@ import {
   PUSH_MINUS_BUTTON_REQUEST,
   PUSH_MULTIPLY_BUTTON_REQUEST,
   PUSH_DIVIDE_BUTTON_REQUEST,
+  PUSH_EQUAL_REQUEST,
 } from "../../const/actionTypes";
 
 /** from
@@ -25,4 +26,8 @@ export function multiply() {
 }
 export function divide() {
   return { type: PUSH_DIVIDE_BUTTON_REQUEST };
+}
+
+export function equal() {
+  return { type: PUSH_EQUAL_REQUEST };
 }
