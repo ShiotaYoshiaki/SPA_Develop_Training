@@ -1,83 +1,53 @@
-import { PUSH_PLUS_BUTTON_REQUEST } from '../../const/actionTypes';
-import { PUSH_MINUS_BUTTON_REQUEST } from '../../const/actionTypes';
+import { PUSH_PLUS_BUTTON_REQUEST, PUSH_NUMBER_BUTTON_SUCCESS } from "../../const/actionTypes";
+import { PUSH_MINUS_BUTTON_REQUEST } from "../../const/actionTypes";
 import { PUSH_MULTIPLY_BUTTON_REQUEST } from "../../const/actionTypes";
 import { PUSH_DIVIDE_BUTTON_REQUEST } from "../../const/actionTypes";
-import { PUSH_EQUAL_BUTTON_REQUEST } from "../../const/actionTypes";
-import { NUMBER1, NUMBER2, NUMBER3, NUMBER4, NUMBER5, NUMBER6, NUMBER7, NUMBER8, NUMBER9, NUMBER0 } from "../../const/actionTypes";
 
 
 const initialState = {
+  /**
+   * 左辺
+   */
   num: 0,
+  /**
+   * 右辺
+   */
   num2: 0,
- operator: '',
- showingResult: false,
- calculate: false,
-
-
+  /**
+   * 四則演算文字列
+   * CALC_PARAMのいずれかが入る
+   */
+  operator: "",
+  /**
+   * 計算結果表示中 → true
+   * 計算途中 → false
+   */
+  showingResult: false,
+  /**
+   * よくわからない
+   */
+  calculate: false,
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case NUMBER1:
+    case PUSH_NUMBER_BUTTON_SUCCESS:
+      console.log('====================');
       return {
         ...state,
-        num: (state.num  + '1') * 1,
-      };
-      case NUMBER2:
+        num: action.payload,
+      }
+
+    case PUSH_PLUS_BUTTON_REQUEST:
       return {
         ...state,
-        num: (state.num + '2') * 1, 
-      };
-      case NUMBER3:
-      return {
-        ...state,
-        num: (state.num + '3') * 1,
-      };
-      case NUMBER4:
-      return {
-        ...state,
-        num: (state.num + '4') * 1,
-      };
-      case NUMBER5:
-      return {
-        ...state,
-        num: (state.num + '5') * 1,
-      };
-      case NUMBER6:
-      return {
-        ...state,
-        num: (state.num + '6') * 1,
-      };
-      case NUMBER7:
-      return {
-        ...state,
-        num: (state.num + '7') * 1,
-      };
-      case NUMBER8:
-      return {
-        ...state,
-        num: (state.num + '8') * 1,
-      };
-      case NUMBER9:
-      return {
-        ...state,
-        num: (state.num + '9') * 1,
-      };
-      case NUMBER0:
-      return {
-        ...state,
-        num: (state.num + '0') * 1,
-      };
-      case PUSH_PLUS_BUTTON_REQUEST:
-      return {
-        ...state,
-        operator:'+',
+        operator: "+",
         num: state.num,
       };
     case PUSH_MINUS_BUTTON_REQUEST:
       return {
         ...state,
-        operator:'-',
+        operator: "-",
       };
     case PUSH_MULTIPLY_BUTTON_REQUEST:
       return {
@@ -88,7 +58,8 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         num: state.num / state.num,
-     };
-     default: return state
+      };
+    default:
+      return state;
   }
 }
