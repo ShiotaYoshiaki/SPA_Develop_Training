@@ -5,6 +5,12 @@ import { CALC_PARAM } from "../../const/calcParam";
 function toResultCalc(num, num2, operator) {
   if(operator === CALC_PARAM.PLUS) {
     return num + num2;
+  } if(operator === CALC_PARAM.MINUS) {
+    return num - num2;
+  } if(operator === CALC_PARAM.MULTIPLY) {
+    return num * num2;
+  } if(operator === CALC_PARAM.DIVIDE) {
+    return num / num2;
   }
 }
 
@@ -25,6 +31,8 @@ function* run() {
     type: TYPES.PUSH_EQUAL_SUCCESS,
     payload: {
       num: result,
+      num2: 0,
+      operator: '',
     }
   })
 }

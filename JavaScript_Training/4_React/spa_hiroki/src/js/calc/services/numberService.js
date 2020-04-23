@@ -29,7 +29,7 @@ function* run(action) {
     yield put({
       type: TYPES.PUSH_NUMBER_BUTTON_SUCCESS,
       payload: {
-        num: nextNum,
+        num: nextNum,　
       },
     });
   } else {
