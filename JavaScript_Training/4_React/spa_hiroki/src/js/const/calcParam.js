@@ -9,4 +9,5 @@ export const CALC_PARAM = {
   MULTIPLY: 'x',
   DIVIDE: '÷',
   EQUAL: '=',
+  CLEAR: 'AC', 
 };

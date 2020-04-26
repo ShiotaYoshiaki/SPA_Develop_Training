@@ -5,6 +5,7 @@ import {
   PUSH_MINUS_BUTTON_REQUEST,
   PUSH_DIVIDE_BUTTON_REQUEST,
   PUSH_EQUAL_SUCCESS,
+  PUSH_CLEAR_BUTTON_SUCCESS,
 } from "../../const/actionTypes";
 import { CALC_PARAM } from "../../const/calcParam";
 
@@ -62,11 +63,17 @@ export default function reducer(state = initialState, action) {
         ...state,
         operator: CALC_PARAM.DIVIDE,
       };
+      case PUSH_CLEAR_BUTTON_SUCCESS:
+      return {
+        ...state,
+        ...action.payload,
+      };
     case PUSH_EQUAL_SUCCESS:
       return {
         ...state,
         ...action.payload,
-      }
+      };
+      
     default:
       return state;
   }

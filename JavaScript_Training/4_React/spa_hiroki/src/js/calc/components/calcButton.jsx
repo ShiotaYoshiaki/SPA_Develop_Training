@@ -31,6 +31,13 @@ class calcButton extends React.Component {
         </button>
       );
     }
+    if (this.props.param === CALC_PARAM.CLEAR) {
+      return (
+        <button onClick={() => this.props.clear()}>
+          {this.props.param}
+        </button>
+      );
+    }
     return (
       <button onClick={() => this.props.divide(this.props.param)}>
         {this.props.param}
