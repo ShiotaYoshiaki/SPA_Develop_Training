@@ -13,7 +13,7 @@ const initialState = {
   /**
    * 左辺
    */
-  num: 0,
+  num: '',
   /**
    * 右辺
    */
