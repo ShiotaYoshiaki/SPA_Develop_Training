@@ -5,6 +5,7 @@ import {
   PUSH_MULTIPLY_BUTTON_REQUEST,
   PUSH_DIVIDE_BUTTON_REQUEST,
   PUSH_EQUAL_REQUEST,
+  PUSH_CLEAR_BUTTON_REQUEST,
 } from "../../const/actionTypes";
 
 /** from
@@ -14,7 +15,6 @@ import {
 export function putNumber(num) {
   return { type: PUSH_NUMBER_BUTTON_REQUEST, payload: num };
 }
-
 export function plus() {
   return { type: PUSH_PLUS_BUTTON_REQUEST };
 }
@@ -27,7 +27,9 @@ export function multiply() {
 export function divide() {
   return { type: PUSH_DIVIDE_BUTTON_REQUEST };
 }
-
 export function equal() {
   return { type: PUSH_EQUAL_REQUEST };
+}
+export function clear() {
+  return { type: PUSH_CLEAR_BUTTON_REQUEST };
 }

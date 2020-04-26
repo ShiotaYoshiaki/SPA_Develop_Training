@@ -4,7 +4,7 @@ import { CALC_PARAM } from "../../const/calcParam";
 
 function toResultCalc(num, num2, operator) {
   if(operator === CALC_PARAM.CLEAR) {
-    return num + num2;
+    return num = num2;
   } 
 }
 
@@ -24,7 +24,7 @@ function* run() {
   yield put({
     type: TYPES.PUSH_EQUAL_SUCCESS,
     payload: {
-      num: result,
+      num: 0,
       num2: 0,
       operator: '',
     }
