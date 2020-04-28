@@ -11,7 +11,7 @@ function toResultCalc(num, num2, operator) {
     return num * num2;
   } if(operator === CALC_PARAM.DIVIDE) {
     return num / num2;
-  }
+  } return num;
 }
 
 
