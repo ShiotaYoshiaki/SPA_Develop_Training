@@ -1,7 +1,7 @@
 /**
  * 問題文
  * callBack関数を使用した処理を記載してください
- * 
+ *
  * 条件
  * 1. firstFunc, secondFunk, thirdFuncをそれぞれ作成してください
  * 2. まず最初にグローバルにfirstFuncを宣言してください(引数不要)
