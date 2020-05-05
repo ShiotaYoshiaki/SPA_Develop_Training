@@ -50,8 +50,7 @@ export default function reducer(state = initialState, action) {
     case PUSH_MINUS_BUTTON_REQUEST:
       return {
         ...state,
-        operator: CALC_PARAM.MINUS
-        ,
+        operator: CALC_PARAM.MINUS,
       };
     case PUSH_MULTIPLY_BUTTON_REQUEST:
       return {
